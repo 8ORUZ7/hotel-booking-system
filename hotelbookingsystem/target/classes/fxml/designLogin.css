@@ -1,0 +1,78 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 2, 2024, 11:01:32 PM
+    Author     : shift
+*/
+
+.bg-form{
+    -fx-background-color:#1e242e;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+
+.close:hover{
+    -fx-background-color:#ff5151; 
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+
+.minimize:hover{
+    -fx-background:#c5273f;
+}
+
+.textfield{
+    -fx-background-color:transparent;
+    -fx-text-inner-color:#fff;
+    -fx-border-color:#5c7ee6;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-text-size: 13px;
+}
+
+.textfield:focused{
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.login-btn{
+    -fx-background-color: linear-gradient(to bottom right, #35529d, #2371d0);
+    -fx-background-radius: 8px;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom right, #3862c2, #4284d0);
+    -fx-font-text: Arial Black;
+}
+
+.hyperlink{
+    -fx-underline:false;
+    -fx-text-fill:#5c7ee6;
+    -fx-border-color:transparent;
+    -fx-border-width: 0px;
+}
+
+.hyperlink:hover{
+    -fx-text-fill:#ffffff;
+}
+
+.signup-btn{
+    -fx-background-color:linear-gradient(to bottom right, #3e785c, #399a73);
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+
+.signup-btn:hover{
+    -fx-background-color:linear-gradient(to bottom right, #4d9a76, #45b796);
+    -fx-font-text: Arial Black;
+}
