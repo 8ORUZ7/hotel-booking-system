@@ -1,13 +1,16 @@
 # hotel-booking-system
-gui application using java apache
-- room booking (add/create)
-- customer details (show/read)
-- availability dashboard (update)
-- cancellation (delete)
+gui application using java apache (javafx)
 
-> note: the default version, which includes an example of CRUD operations, will only be released in this repository.
+(/) login/signup authentication
+(/) admin dashboard - total check-in, income, avail room 
+( ) CRUD - manual (conditions: won't allow to input unregistered room), room name/type/duration of stay
+( ) available rooms 
+( ) guess check-in (details) CURRENTLY
+( ) logbook
 
-- 11/20 update for flowchart submission
 
-expected timeframe: 2 days
-> publish on yt demo from the scratch (for portfolio documentation)
+> note: the default version, which includes an example of CRUD operations, will only be released in this repository. 
+
+
+
+
