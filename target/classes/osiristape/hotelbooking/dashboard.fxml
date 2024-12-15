@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="1140.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="osiristape.hotelbooking.DashboardController">
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="690.0" prefWidth="1126.0" stylesheets="@dashboard.css">
+         <children>
+            <AnchorPane layoutX="931.0" prefHeight="690.0" prefWidth="210.0" styleClass="nav-form" stylesheets="@dashboard.css">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="BUILDING" layoutX="78.0" layoutY="121.0" size="6em" text="" />
+                  <Label layoutX="74.0" layoutY="139.0" text="Welcome!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="email" layoutX="42.0" layoutY="157.0" text="Your Username" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="dashboard_btn" layoutX="22.0" layoutY="208.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="166.0" styleClass="nav-btn" stylesheets="@dashboard.css" text="Dashboard" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RoomListing_btn" layoutX="21.0" layoutY="241.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="166.0" styleClass="nav-btn" stylesheets="@dashboard.css" text="Room Listing" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="GuessCheckIn_btn" layoutX="22.0" layoutY="272.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="166.0" styleClass="nav-btn" stylesheets="@dashboard.css" text="Guess Check-In" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SERVER" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RoomAvail_btn" layoutX="18.0" layoutY="301.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="32.0" prefWidth="174.0" styleClass="nav-btn" stylesheets="@dashboard.css" text="Room Availability" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="#f7f7f7" glyphName="EDIT" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="LogBook_btn" layoutX="22.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="166.0" styleClass="nav-btn" stylesheets="@dashboard.css" text="Log Book" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" text="" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signout" layoutX="21.0" layoutY="639.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="44.0" styleClass="signout" stylesheets="@dashboard.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                     </graphic>
+                  </Button>
+                  <Label layoutX="76.0" layoutY="649.0" text="Sign Out" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="2.0" layoutY="38.0" prefHeight="649.0" prefWidth="926.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#878c91" height="38.0" layoutX="-1.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1142.0" />
+            <Label layoutX="31.0" layoutY="12.0" text="H o t e l   B o o k i n g   S y s t e m">
+               <font>
+                  <Font name="Arial Black" size="9.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon glyphName="PLAY" layoutX="10.0" layoutY="22.0" size="0.8em" />
+            <Button layoutX="1075.0" mnemonicParsing="false" onAction="#close" prefHeight="38.0" prefWidth="65.0" styleClass="close" stylesheets="@dashboard.css" textFill="TRANSPARENT">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="1.2em" />
+               </graphic>
+            </Button>
+            <Button layoutX="1007.0" mnemonicParsing="false" onAction="#minimize" prefHeight="38.0" prefWidth="66.0" styleClass="minimize" stylesheets="@dashboard.css" textFill="#b8b2b200">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.2em" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="38.0" prefHeight="649.0" prefWidth="926.0" stylesheets="@dashboard.css" />
+      <AnchorPane fx:id="dashboard_form" layoutX="2.0" layoutY="39.0" prefHeight="650.0" prefWidth="926.0" styleClass="bg-white" stylesheets="@dashboard.css" visible="false">
+         <children>
+            <AnchorPane layoutX="11.0" layoutY="277.0" prefHeight="367.0" prefWidth="906.0" styleClass="bg-white" stylesheets="@dashboard.css" />
+            <AnchorPane layoutX="10.0" layoutY="16.0" prefHeight="239.0" prefWidth="906.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="222.0" prefWidth="266.0" styleClass="card1" stylesheets="@dashboard.css">
+                     <children>
+                        <AnchorPane layoutX="-1.0" prefHeight="222.0" prefWidth="86.0" styleClass="card1-left" stylesheets="@dashboard.css">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="20.0" layoutY="130.0" size="5em" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="98.0" layoutY="189.0" text="Hotel Guess Today" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dashboard_HotelGuess" layoutX="96.0" layoutY="11.0" text="1500" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="314.0" layoutY="8.0" prefHeight="222.0" prefWidth="273.0" styleClass="card2" stylesheets="@dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="222.0" prefWidth="86.0" styleClass="card2-left" stylesheets="@dashboard.css">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="11.0" layoutY="131.0" size="5em" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="98.0" layoutY="189.0" text="Total Income Today" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dashboard_TotalIncome" layoutX="97.0" layoutY="11.0" text="1500" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="632.0" layoutY="8.0" prefHeight="222.0" prefWidth="266.0" styleClass="card3" stylesheets="@dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="222.0" prefWidth="86.0" styleClass="card3-left" stylesheets="@dashboard.css">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="BUILDING" layoutX="19.0" layoutY="128.0" size="5em" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="108.0" layoutY="190.0" text="Available Rooms" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dashboard_AvailRooms" layoutX="96.0" layoutY="11.0" text="1500" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RoomListing_form" layoutY="38.0" prefHeight="650.0" prefWidth="926.0" styleClass="bg-white" stylesheets="@dashboard.css">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="628.0" prefWidth="254.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <AnchorPane layoutX="27.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-white" stylesheets="@dashboard.css">
+                     <children>
+                        <ImageView fx:id="RoomListing_imgview" fitHeight="204.0" fitWidth="200.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="8.0" layoutY="310.0" text="Room Number :" />
+                  <TextField fx:id="RoomListing_number" layoutX="99.0" layoutY="306.0" prefHeight="31.0" prefWidth="144.0" styleClass="add-textfield" stylesheets="@dashboard.css" />
+                  <Button fx:id="RoomListing_importimg" layoutX="72.0" layoutY="255.0" mnemonicParsing="false" onAction="#importImage" prefHeight="26.0" prefWidth="110.0" styleClass="insert-btn" stylesheets="@dashboard.css" text="Import Image" />
+                  <Button fx:id="RoomListing_insertbtn" layoutX="20.0" layoutY="466.0" mnemonicParsing="false" onAction="#insertAddHotelInfos" prefHeight="26.0" prefWidth="103.0" styleClass="insert-btn" stylesheets="@dashboard.css" text="Insert" />
+                  <Button fx:id="RoomListing_updatebtn" layoutX="130.0" layoutY="466.0" mnemonicParsing="false" onAction="#updateAddHotelInfos" prefHeight="26.0" prefWidth="103.0" styleClass="update-btn" stylesheets="@dashboard.css" text="Update" />
+                  <Button fx:id="RoomListing_deletebtn" layoutX="20.0" layoutY="500.0" mnemonicParsing="false" onAction="#deleteAddHotelInfos" prefHeight="26.0" prefWidth="103.0" styleClass="delete-btn" stylesheets="@dashboard.css" text="Delete" />
+                  <Button fx:id="RoomListing_clearbtn" layoutX="130.0" layoutY="500.0" mnemonicParsing="false" onAction="#clearAddHotelInfos" prefHeight="26.0" prefWidth="103.0" styleClass="clear-btn" stylesheets="@dashboard.css" text="Clear" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="268.0" layoutY="10.0" prefHeight="628.0" prefWidth="648.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <TableView fx:id="RoomListing_tableview" layoutX="11.0" layoutY="82.0" prefHeight="536.0" prefWidth="626.0" stylesheets="@dashboard.css">
+                    <columns>
+                      <TableColumn fx:id="RoomListing_addcol_roomNumber" prefWidth="176.00003051757812" text="Room Number" />
+                      <TableColumn fx:id="RoomListing_addcol_roomType" prefWidth="160.79998779296875" text="Room Type" />
+                        <TableColumn fx:id="RoomListing_addcol_roomStay" prefWidth="163.20001220703125" text="Duration of Stay" />
+                        <TableColumn fx:id="RoomListing_addcol_roomAdded" prefWidth="131.99993896484375" text="Date Added" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="RoomListing_search" layoutX="13.0" layoutY="34.0" onKeyTyped="#searchAddHotelInfos" prefHeight="30.0" prefWidth="242.0" styleClass="search" stylesheets="@dashboard.css">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding></TextField>
+                  <FontAwesomeIcon glyphName="SEARCH" layoutX="20.0" layoutY="56.0" size="1.5em">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </children>
+            </AnchorPane>
+            <Label layoutX="28.0" layoutY="358.0" text="Room Type :" />
+            <TextField fx:id="RoomListing_type" layoutX="101.0" layoutY="354.0" prefHeight="26.0" prefWidth="155.0" styleClass="add-textfield" stylesheets="@dashboard.css" />
+            <Label layoutX="42.0" layoutY="396.0" text="Duration : " />
+            <TextField fx:id="RoomListing_duration" layoutX="101.0" layoutY="393.0" prefHeight="26.0" prefWidth="155.0" styleClass="add-textfield" stylesheets="@dashboard.css" />
+            <Label layoutX="25.0" layoutY="433.0" prefHeight="18.0" prefWidth="78.0" text="Date Added :" />
+            <DatePicker fx:id="RoomListing_added" layoutX="100.0" layoutY="430.0" onAction="#onRoomSelection" onDragDetected="#onRoomSelection" prefHeight="26.0" prefWidth="155.0" styleClass="add-textfield" stylesheets="@dashboard.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="GuessCheckIn_form" layoutY="38.0" prefHeight="650.0" prefWidth="926.0" styleClass="bg-white" stylesheets="@dashboard.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="32.0" prefHeight="239.0" prefWidth="899.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <AnchorPane prefHeight="239.0" prefWidth="274.0" stylesheets="@dashboard.css">
+                     <children>
+                        <Label layoutX="12.0" layoutY="42.0" text="Room Number :" />
+                        <Label layoutX="33.0" layoutY="80.0" text="Room Type : " />
+                        <Label layoutX="29.0" layoutY="117.0" text="Date Added :" />
+                        <TextField fx:id="GuessCheckIn_number" layoutX="118.0" layoutY="37.0" styleClass="label-info" stylesheets="@dashboard.css" />
+                        <TextField fx:id="GuessCheckIn_type" layoutX="118.0" layoutY="75.0" styleClass="label-info" stylesheets="@dashboard.css" />
+                        <TextField fx:id="GuessCheckIn_added" layoutX="118.0" layoutY="114.0" styleClass="label-info" stylesheets="@dashboard.css" />
+                        <Button fx:id="GuessCheckIn_SelectRoombtn" layoutX="100.0" layoutY="166.0" mnemonicParsing="false" onAction="#selectRoom" styleClass="insert-btn" stylesheets="@dashboard.css" text="Select Room" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="label-info" />
+                        <String fx:value="label" />
+                     </styleClass>
+                  </AnchorPane>
+                  <TableView fx:id="GuessCheckIn_tableView" layoutX="326.0" layoutY="8.0" onMouseClicked="#selectAvailableRooms" prefHeight="222.0" prefWidth="560.0">
+                    <columns>
+                      <TableColumn fx:id="GuessCheckIn_addcol_Number" prefWidth="185.60003662109375" text="Room Number" />
+                      <TableColumn fx:id="GuessCheckIn_addcol_Type" minWidth="0.0" prefWidth="187.20001220703125" text="Room Type" />
+                        <TableColumn fx:id="GuessCheckIn_addcol_Added" minWidth="0.0" prefWidth="187.20001220703125" text="Date Added" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="295.0" prefHeight="329.0" prefWidth="899.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <AnchorPane prefHeight="330.0" prefWidth="298.0" styleClass="label-info" stylesheets="@dashboard.css">
+                     <children>
+                        <AnchorPane layoutX="37.0" layoutY="38.0" prefHeight="200.0" prefWidth="220.0">
+                           <children>
+                              <ImageView fx:id="GuessCheckIn_imgview" fitHeight="200.0" fitWidth="220.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="GuessCheckIn_RoomNumber" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="250.0" prefHeight="24.0" prefWidth="130.0" text="Room Number" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="GuessCheckIn_RoomType" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="274.0" prefHeight="20.0" prefWidth="103.0" text="Room Type" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="316.0" layoutY="15.0" text="Guess Check-In">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="67.0" text="Hours Stay">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="686.0" layoutY="69.0" text="Price">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="421.0" layoutY="105.0" text="Hours Stay">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="GuessCheckIn_HoursStaySpinner" layoutX="530.0" layoutY="101.0" onMouseClicked="#getSpinnerValue" prefHeight="26.0" prefWidth="103.0" stylesheets="@dashboard.css" />
+                  <Spinner fx:id="GuessCheckIn_RoomTypeSpinner" editable="true" layoutX="530.0" layoutY="143.0" onMouseClicked="#getSpinnerValue" prefHeight="26.0" prefWidth="103.0" stylesheets="@dashboard.css" />
+                  <Label fx:id="GuessCheckIn_HoursStayValue" layoutX="687.0" layoutY="103.0" onMouseClicked="#showSpinnerValue" text="₱0.00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GuessCheckIn_RoomTypeValue" layoutX="687.0" layoutY="146.0" onMouseClicked="#showSpinnerValue" text="₱0.00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="421.0" layoutY="147.0" text="Room Type">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="589.0" layoutY="186.0" text="Total:">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GuessCheckIn_TotalValue" layoutX="686.0" layoutY="184.0" onMouseClicked="#showSpinnerValue" text="₱0.00">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="GuessCheckIn_CheckInbtn" layoutX="721.0" layoutY="240.0" mnemonicParsing="false" onAction="#buy" prefHeight="38.0" prefWidth="82.0" styleClass="buy-btn" stylesheets="@dashboard.css" text="Check-In" />
+                  <Button fx:id="GuessCheckIn_Receiptbtn" layoutX="633.0" layoutY="240.0" mnemonicParsing="false" onAction="#receipt" prefHeight="38.0" prefWidth="74.0" styleClass="receipt-btn" stylesheets="@dashboard.css" text="Receipt" />
+                  <Button fx:id="GuessCheckIn_Clearbtn" layoutX="421.0" layoutY="240.0" mnemonicParsing="false" onAction="#clearPurchaseRoomInfo" prefHeight="38.0" prefWidth="70.0" styleClass="clear-btn" stylesheets="@dashboard.css" text="Clear" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RoomAvail_form" layoutY="39.0" prefHeight="650.0" prefWidth="926.0" styleClass="bg-white" stylesheets="@dashboard.css" visible="false">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="14.0" prefHeight="628.0" prefWidth="266.0" styleClass="bg-white" stylesheets="@designLogin.css">
+               <children>
+                  <AnchorPane layoutX="33.0" layoutY="27.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-white" stylesheets="@dashboard.css">
+                     <children>
+                        <ImageView fx:id="RoomAvail_ImgView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="RoomAvail_RoomNumber" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="243.0" prefHeight="20.0" prefWidth="109.0" stylesheets="@dashboard.css" text="Room Number" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="RoomAvail_RoomType" alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="273.0" prefHeight="18.0" prefWidth="51.0" stylesheets="@dashboard.css" text="Room Type" textAlignment="CENTER" />
+                  <Label layoutX="27.0" layoutY="323.0" text="Current:">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RoomAvail_Current" layoutX="88.0" layoutY="312.0" onAction="#listStatusBox" prefHeight="38.0" prefWidth="150.0" promptText="Choose" styleClass="spinner" stylesheets="@dashboard.css" />
+                  <Button fx:id="RoomAvail_Updatebtn" layoutX="25.0" layoutY="390.0" mnemonicParsing="false" onAction="#updateRoomAvail" prefHeight="38.0" prefWidth="74.0" styleClass="update-btn" stylesheets="@dashboard.css" text="Update" />
+                  <Button fx:id="RoomAvail_Deletebtn" layoutX="164.0" layoutY="390.0" mnemonicParsing="false" onAction="#clearEditRoomAvail" prefHeight="38.0" prefWidth="74.0" styleClass="delete-btn" stylesheets="@dashboard.css" text="Delete" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="14.0" prefHeight="628.0" prefWidth="614.0" styleClass="bg-white" stylesheets="@designLogin.css">
+               <children>
+                  <TextField fx:id="RoomAvail_search" layoutX="16.0" layoutY="18.0" onAction="#searchEditRoomAvail" onKeyTyped="#searchEditRoomAvail" prefHeight="32.0" prefWidth="210.0" styleClass="search" stylesheets="@dashboard.css" text="      Search" />
+                  <FontAwesomeIcon glyphName="SEARCH" layoutX="27.0" layoutY="39.0" size="1.2em" />
+                  <TableView fx:id="RoomAvail_TableView" layoutX="14.0" layoutY="64.0" onMouseClicked="#selectEditRoomAvail" prefHeight="552.0" prefWidth="586.0" stylesheets="@dashboard.css">
+                    <columns>
+                      <TableColumn fx:id="RoomAvail_addcol_RoomNumber" prefWidth="188.0" text="Room Number" />
+                      <TableColumn fx:id="RoomAvail_addcol_RoomType" prefWidth="156.79998779296875" text="Room Type" />
+                        <TableColumn fx:id="RoomAvail_addcol_Stay" prefWidth="122.39996337890625" text="Duration of Stay" />
+                        <TableColumn fx:id="RoomAvail_addcol_CurrentStatus" prefWidth="123.19989013671875" text="Current Status" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="LogBook_form" layoutX="2.0" layoutY="38.0" prefHeight="649.0" prefWidth="926.0" styleClass="bg-white" stylesheets="@dashboard.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="628.0" prefWidth="347.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="208.0" prefWidth="318.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="16.0" text="Guess Check-In :">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="51.0" text="Room Number :">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="87.0" text="Room Type :">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="123.0" text="Time Check-In :">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="159.0" text="Date Check-In:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LogBook_GuessName" layoutX="130.0" layoutY="11.0" prefHeight="30.0" prefWidth="173.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LogBook_RoomNumber" layoutX="130.0" layoutY="46.0" prefHeight="30.0" prefWidth="173.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LogBook_RoomType" layoutX="130.0" layoutY="81.0" prefHeight="30.0" prefWidth="173.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LogBook_TimeCheckIn" layoutX="130.0" layoutY="117.0" prefHeight="30.0" prefWidth="173.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LogBook_DateCheckIn" layoutX="130.0" layoutY="153.0" prefHeight="30.0" prefWidth="173.0" styleClass="card-customer" stylesheets="@dashboard.css">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="LogBook_Deletebtn" layoutX="216.0" layoutY="266.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="38.0" prefWidth="85.0" styleClass="delete-btn" stylesheets="@dashboard.css" text="Delete" />
+                  <Button fx:id="LogBook_Clearbtn" layoutX="49.0" layoutY="266.0" mnemonicParsing="false" onAction="#clearCustomer" prefHeight="38.0" prefWidth="81.0" styleClass="clear-btn" stylesheets="@dashboard.css" text="Clear" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="376.0" layoutY="12.0" prefHeight="628.0" prefWidth="543.0" styleClass="bg-white" stylesheets="@dashboard.css">
+               <children>
+                  <TableView fx:id="LogBook_TableView" layoutX="12.0" layoutY="71.0" onMouseClicked="#selectCustomerList" prefHeight="542.0" prefWidth="519.0">
+                    <columns>
+                      <TableColumn fx:id="LogBook_addcol_GuessCheckIn" prefWidth="124.800048828125" text="Guess Check-In" />
+                      <TableColumn fx:id="LogBook_addcol_RoomNumber" prefWidth="110.39996337890625" text="Room Number" />
+                        <TableColumn fx:id="LogBook_addcol_RoomType" text="Room Type" />
+                        <TableColumn fx:id="LogBook_addcol_TimeCheckIn" prefWidth="90.4000244140625" text="Time Check-In" />
+                        <TableColumn fx:id="LogBook_addcol_DateCheckIn" prefWidth="101.5999755859375" text="Date Check-In" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="LogBook_search" layoutX="398.0" layoutY="32.0" onKeyTyped="#searchCustomer" prefHeight="32.0" prefWidth="210.0" styleClass="search" stylesheets="@dashboard.css">
+               <padding>
+                  <Insets left="30.0" />
+               </padding></TextField>
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="409.0" layoutY="53.0" size="1.2em" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<!-- 2024-12-15T15:37:23 -->
+<jasperReport name="receipts" language="java" columnCount="1" pageWidth="226" pageHeight="425" columnWidth="51" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ecc5904e-b0da-471f-8711-cb37b90a67f6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="connection"/>
+	<query language="SQL"><![CDATA[]]></query>
+	<field name="roomNumber" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="room_number"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="roomNumber"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="1"/>
+	</field>
+	<field name="roomType" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="room_type"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="roomType"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="2"/>
+	</field>
+	<field name="date" class="java.util.Date"/>
+	<field name="total" class="java.lang.Double">
+		<property name="net.sf.jasperreports.sql.field.column.index" value="3"/>
+		<property name="net.sf.jasperreports.sql.field.column.name" value="total_amount&#x9;"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="total"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="91" splitType="Stretch">
+		<element kind="staticText" uuid="ce4021c9-f89d-46f2-868c-dbc82620a1f3" x="80" y="30" width="100" height="30" fontName="Arial Black" fontSize="14.0">
+			<text><![CDATA[otella]]></text>
+		</element>
+		<element kind="staticText" uuid="1fd90a4a-1d4c-40b9-929e-b9ce5e29891d" x="40" y="10" width="145" height="62" fontName="Vladimir Script" fontSize="50.0">
+			<text><![CDATA[H]]></text>
+		</element>
+		<element kind="staticText" uuid="6407d92f-bc86-4731-af34-e1053d510fb1" x="106" y="0" width="100" height="30" fontSize="8.0">
+			<text><![CDATA[Room No: $F{roomNumber}]]></text>
+		</element>
+		<element kind="line" uuid="9f04f78b-fd37-4864-87cb-d5b9461567f7" x="0" y="76" width="185" height="1">
+			<pen lineWidth="1.0" lineStyle="Double" lineColor="#757575"/>
+		</element>
+	</title>
+	<pageHeader height="63" splitType="Stretch">
+		<element kind="staticText" uuid="88ddd4c2-3ba2-4912-97fd-544aa7c0c4fa" x="0" y="-6" width="50" height="16" fontName="Arial Black" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[Room Type]]></text>
+		</element>
+		<element kind="staticText" uuid="8decb1c5-6557-42e6-af68-9f02306f9bf3" x="50" y="-6" width="90" height="16" fontName="Arial Black" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[Room Number]]></text>
+		</element>
+		<element kind="staticText" uuid="a90a6b9e-aa24-47c2-bc55-685dfb3eeec1" x="140" y="-6" width="45" height="16" fontName="Arial Black" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[Total]]></text>
+		</element>
+		<element kind="staticText" uuid="106b96c4-2eeb-479d-acc0-f909d1409f64" x="8" y="24" width="35" height="30" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[$F{roomType}]]></text>
+		</element>
+		<element kind="staticText" uuid="c64d509f-9b57-47d1-b74b-0c144b1be11d" x="77" y="24" width="35" height="30" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[$F{roomNumber}]]></text>
+		</element>
+		<element kind="staticText" uuid="ed619020-f755-4f62-b3a4-daf4cb94ed7d" x="145" y="24" width="35" height="30" fontSize="8.0" hTextAlign="Center">
+			<text><![CDATA[$F{total}]]></text>
+		</element>
+		<element kind="line" uuid="daf04cbf-e089-4622-a459-78a1a0ac09bb" x="0" y="62" width="185" height="1">
+			<pen lineStyle="Dashed"/>
+		</element>
+		<element kind="line" uuid="369fb9ac-47cb-4e7a-a02c-6933bf36a323" x="0" y="15" width="185" height="1">
+			<pen lineWidth="1.0" lineStyle="Double" lineColor="#757575"/>
+		</element>
+	</pageHeader>
+	<columnHeader height="77" splitType="Stretch">
+		<element kind="staticText" uuid="207ad2b8-1aac-4cf1-9ebe-02b280a9e111" x="50" y="30" width="100" height="30">
+			<text><![CDATA[Total Payment: ]]></text>
+		</element>
+		<element kind="staticText" uuid="568fdd15-ad23-4b43-bb76-6aa4e692447f" x="120" y="30" width="100" height="30">
+			<text><![CDATA[$F{total}]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="staticText" uuid="4bd1ebd0-449c-4525-9c8e-469aea916744" x="145" y="50" width="100" height="30">
+				<text><![CDATA[$F{date}]]></text>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="65" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

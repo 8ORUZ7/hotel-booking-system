@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+	<name>hotelbooking</name>
+	<classpath>C:\Users\shift\Downloads\mysql-connector-j-9.0.0\mysql-connector-j-9.0.0\mysql-connector-j-9.0.0.jar</classpath>
+	<driver>com.mysql.jdbc.Driver</driver>
+	<username>root</username>
+	<password></password>
+	<url>jdbc:mysql://localhost/hotelbooking</url>
+	<database></database>
+	<savePassword>true</savePassword>
+	<serverAddress></serverAddress>
+</jdbcDataAdapter>

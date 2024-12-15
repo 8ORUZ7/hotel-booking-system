@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="513.0" prefWidth="666.0" styleClass="mainFxmlClass" stylesheets="@designLogin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="osiristape.hotelbooking.SigninController">
+   <children>
+      <AnchorPane fx:id="signup_form" layoutY="-1.0" prefHeight="514.0" prefWidth="666.0" styleClass="bg-form" stylesheets="@designLogin.css" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label layoutX="264.0" layoutY="200.0" stylesheets="@designLogin.css" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="signup_close" layoutX="598.0" layoutY="2.0" mnemonicParsing="false" onAction="#signup_close" prefHeight="34.0" prefWidth="66.0" styleClass="close" stylesheets="@designLogin.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="1.2em" />
+               </graphic>
+            </Button>
+            <Button fx:id="signup_minimize" layoutX="537.0" layoutY="2.0" mnemonicParsing="false" onAction="#signup_minimize" prefHeight="34.0" prefWidth="59.0" styleClass="minimize" stylesheets="@designLogin.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.2em" styleClass="minimize" />
+               </graphic>
+            </Button>
+            <FontAwesomeIcon caretBias="false" fill="WHITE" glyphName="USER_PLUS" layoutX="281.0" layoutY="183.0" size="8em" wrappingWidth="105.6570692062378">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </FontAwesomeIcon>
+            <TextField fx:id="signup_email" layoutX="236.0" layoutY="252.0" onAction="#signup" prefHeight="34.0" prefWidth="196.0" promptText="Email" styleClass="textfield" stylesheets="@designLogin.css">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="signup_username" layoutX="236.0" layoutY="294.0" onAction="#signup" prefHeight="34.0" prefWidth="196.0" promptText="Username" styleClass="textfield" stylesheets="@designLogin.css">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="signup_password" layoutX="236.0" layoutY="335.0" onAction="#signup" prefHeight="34.0" prefWidth="196.0" promptText="Password" styleClass="textfield" stylesheets="@designLogin.css">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="signup_btn" layoutX="285.0" layoutY="389.0" mnemonicParsing="false" onAction="#signup" prefHeight="42.0" prefWidth="90.0" styleClass="signup-btn" stylesheets="@designLogin.css" text="Sign Up">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="signup_alreadyhaveaccount" layoutX="301.0" layoutY="454.0" onAction="#switchForm" stylesheets="@designLogin.css" text="Sign In?">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signin_form" prefHeight="513.0" prefWidth="666.0" styleClass="bg-form" stylesheets="@designLogin.css">
+         <children>
+            <Label layoutX="271.0" layoutY="202.0" stylesheets="@designLogin.css" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="signin_close" layoutX="598.0" layoutY="2.0" mnemonicParsing="false" onAction="#signin_close" prefHeight="34.0" prefWidth="66.0" styleClass="close" stylesheets="@designLogin.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="1.2em" />
+               </graphic>
+            </Button>
+            <Button fx:id="signin_minimize" layoutX="537.0" layoutY="2.0" mnemonicParsing="false" onAction="#signin_minimize" prefHeight="34.0" prefWidth="59.0" styleClass="minimize" stylesheets="@designLogin.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.2em" styleClass="minimize" />
+               </graphic>
+            </Button>
+            <FontAwesomeIcon caretBias="false" fill="WHITE" glyphName="USERS" layoutX="281.0" layoutY="183.0" size="8em" wrappingWidth="105.6570692062378">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </FontAwesomeIcon>
+            <TextField fx:id="signin_email" layoutX="236.0" layoutY="277.0" onAction="#signin" prefHeight="34.0" prefWidth="196.0" promptText="Email" styleClass="textfield" stylesheets="@designLogin.css">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="signin_password" layoutX="236.0" layoutY="324.0" onAction="#signin" prefHeight="34.0" prefWidth="196.0" promptText="Password" styleClass="textfield" stylesheets="@designLogin.css">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="signin_loginBtn" layoutX="296.0" layoutY="377.0" mnemonicParsing="false" onAction="#signin" onKeyPressed="#signin" prefHeight="41.0" prefWidth="73.0" styleClass="login-btn" stylesheets="@designLogin.css" text="Login">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="signin_createAccount" layoutX="301.0" layoutY="454.0" onAction="#switchForm" stylesheets="@designLogin.css" text="Sign Up?">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
