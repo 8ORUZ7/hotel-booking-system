@@ -1,9 +1,9 @@
-<p align="center">
+<!--<p align="center">
     <a href="https://github.com/osiristape/hotel-booking-system/edit/main/README.md">EN</a>  |   
     <a href="https://github.com/osiristape/hotel-booking-system/edit/main/README-ES.md">ES</a>  |  
     <a href="https://github.com/osiristape/hotel-booking-system/edit/main/README-CN.md">中國官話</a> |  
     <a href="https://github.com/osiristape/hotel-booking-system/edit/main/README-JP.md">日本語</a>
-</p>
+</p>-->
 
 
 # hotel-booking-system
